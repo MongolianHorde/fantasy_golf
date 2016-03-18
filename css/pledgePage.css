@@ -1,0 +1,348 @@
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* top header styles */
+
+body
+{
+	/*background-image: url("../images/background.png");*/
+	background-image: url("../images/photo2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: black;
+}
+
+/* added by Andrea */
+.navbar-header
+{
+	background-color: rgb(34,34,34);
+	width: 250px;
+}
+
+#logo-area
+{
+	display: inline-block;
+	margin-top: -11px;
+}
+
+.TestRepublic
+{
+	font-family: Rockwell, Arial;
+	color: white;
+	font-size: 20px;
+}
+
+#wrapper2{
+    padding-left: 0;
+	background-color: rgb(55,96,146);
+}
+.top-nav {
+    padding: 0 15px;
+}
+
+.top-nav>li {
+    display: inline-block;
+    float: left;
+}
+
+.top-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    color: #999;
+}
+
+.dropdown:hover>.dropdown-menu,
+.dropdown:hover>.dropdown-menu:hover {
+    display: block;
+    color: #fff;
+    background-color: #000;
+    float: left;
+    position: absolute;
+    margin-top: 0;
+    border: 1px solid rgba(0,0,0,.15);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.top-nav>li>a:hover,
+.top-nav>li>a:focus,
+.top-nav>.open>a,
+.top-nav>.open>a:hover,
+.top-nav>.open>a:focus {
+    color: #fff;
+    background-color: #000;
+}
+
+.top-nav>.open>.dropdown-menu {
+    float: left;
+    position: absolute;
+    margin-top: 0;
+    border: 1px solid rgba(0,0,0,.15);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.top-nav>.open>.dropdown-menu>li>a {
+    white-space: normal;
+}
+
+ul.message-dropdown {
+    padding: 0;
+    max-height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+li.message-preview {
+    width: 275px;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+li.message-preview>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+li.message-footer {
+    margin: 5px 0;
+}
+
+ul.alert-dropdown {
+    width: 200px;
+}
+
+/* Toggle Styles */
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+	background-color: rgb(149,179,215);
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 20px;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+	
+}
+
+.sidebar-nav li {
+    text-indent: 15px;
+    line-height: 25px;
+	font-size: 13pt;
+	color: black;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    background: rgba(55,96,146,0.4);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 40px;
+    font-size: 24px;
+    line-height: 40px;
+	color: rgb(0,0,0);
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav 
+{
+	
+    color: #999999;
+    background: none;
+}
+
+#student-summary
+{
+	line-height: 50px;
+}
+
+.course_header
+	{
+		width: 100%;
+		position: fixed;
+		padding: 8px;
+		
+		margin-top: 50px;
+		height: 99px;
+		background: black;
+		font-size: 20pt;
+		color: white;
+		font-weight: bold;
+		z-index: 1;
+	}
+	
+	.course_number
+	{
+		margin-left: 10pt;
+	}
+	
+	.class_name
+	{
+		margin-left: 40pt;
+	}
+
+.main_section
+{
+	margin-left: 50px;
+	margin-right: 50px;
+}	
+	
+.test_title
+{
+	margin-top: 160px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 22pt;
+	text-decoration: underline;
+}
+
+.test_pledge_section
+{
+	margin-top: 10px;
+}
+
+.test_pledge_txt
+{
+	font-size: 20pt;
+	font-weight: bold;
+}
+
+.pledge_tb
+{
+	margin-top: 5px;
+	color: black;
+}
+
+.sign_name_txt
+{
+	margin-top: 50px;
+	font-size: 17pt;
+	font-weight: bold;
+	/*background: rgb(149,179,215);*/
+}
+
+.sign_name_tb
+{
+	width: 20em;
+	font-weight: normal;
+	color: black;
+	text-align: center;
+}
+
+.student_name
+{
+	margin-top: 5px;
+	width: 20em;
+	text-align: center;
+}
+
+.increase_margin
+{
+	margin-top: 50px;
+}
+
+@media(min-width:768px) 
+{
+		#wrapper {
+			padding-top: 149px;
+			padding-left: 250px;
+		}
+
+		#wrapper.toggled {
+			padding-left: 0;
+		}
+
+		#sidebar-wrapper {
+			width: 250px;
+			font-size: 14px;
+		}
+
+		#wrapper.toggled #sidebar-wrapper {
+			width: 0;
+		}
+
+		#page-content-wrapper 
+		{
+			padding: 20px;
+			position: relative;
+		}
+
+		#wrapper.toggled #page-content-wrapper {
+			position: relative;
+			margin-right: 0;
+		}
+		
+	/*testing stuff */
+		textarea
+		{
+			resize:none;
+				
+		}

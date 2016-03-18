@@ -1,0 +1,156 @@
+
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Added .dropdown section by Cody*/ 
+
+/* top header styles */
+
+body
+{
+	background-image: url("../images/photo2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+#loginButton
+{
+	margin-top:10px;
+}
+
+#signUpButton
+{
+	margin-top:10px;
+}
+#username
+{
+	color:#FFFFFF;
+	border-radius: 5px;
+	margin-top:10px;
+	background-color:#B3BBC4;
+}
+
+#password
+{
+	color:#FFFFFF;
+	border-radius: 5px;
+	margin-top:5px;
+	background-color:#B3BBC4;
+}
+.centralBox
+{
+	margin-bottom: 100px;
+}
+
+
+.centralLogo
+{
+	top: 30em;
+    border: none;
+    display: block;
+    margin: 100px auto;
+
+    max-width: 40%;
+    max-height: 40%;
+}
+
+.top-nav {
+    padding: 0 15px;
+}
+
+.top-nav>li {
+    display: inline-block;
+    float: left;
+	 color: #999;
+}
+
+.top-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    color: #999;
+}
+
+.top-nav>li>ul>li>a{
+    color: #999;
+}
+
+/*
+.dropdown:hover>.dropdown-menu:hover {
+    display: block;
+    color: #fff;
+    background-color: #000;
+    position: absolute;
+    margin-top: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+    border: 1px solid rgba(0,0,0,.15);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+
+}*/
+/*
+.dropdown:hover>.dropdown-menu{
+    display: block;
+    color: #fff;
+    background-color: #000;
+    position: absolute;
+    margin-top: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+    border: 1px solid rgba(0,0,0,.15);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}*/
+
+.navbar-right>li>a:hover,
+.navbar-right>li>a:focus,
+.navbar-right>.open>a,
+.navbar-right>.open>a:hover,
+.navbar-right>.open>a:focus {
+    color: #fff;
+    background-color: #000;
+}
+
+.navbar-right>.open>.dropdown-menu {
+	display: block;
+    float: left;
+	color: #999;
+    position: absolute;
+    margin-top: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;   
+    border: 1px solid rgba(0,0,0,.15);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #000;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.navbar-right>.open>.dropdown-menu>li>a {
+    white-space: nowrap;
+    color: #999;
+}
+
+/* Carousel base class */
+.carousel {
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 100px;
+  background-color: #000;
+  opacity: .9;
+}

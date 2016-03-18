@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>  
+<html> 
+<head> 
+    <meta name="author" content="FBBC Fantasy Golf" />
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<link rel="shortcut icon" href="images/golfBallLogo.ico">
+
+
+ <title>FBBC Fantasy Golf - Login</title> 
+	
+	<!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/login.css" rel="stylesheet">
+   <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	 
+	   <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+	 <script>
+	 function GetUrlValue(VarSearch)
+	 {
+	 
+		 var SearchString = window.location.search.substring(1);
+		 var VariableArray = SearchString.split('&');
+		 
+		 for(var i = 0; i < VariableArray.length; i++)
+		 {
+			  var KeyValuePair = VariableArray[i].split('=');
+			  
+			  if(KeyValuePair[0] == VarSearch)
+			  {
+					return KeyValuePair[1].replace(/%20/g, ' ');
+			  }
+		 }
+	}
+	
+	$(document).ready(function(){
+		if(GetUrlValue('errorMessage') == undefined)
+			document.getElementById("test").innerHTML = " ";
+		else
+			document.getElementById("test").innerHTML = GetUrlValue('errorMessage');
+	});
+	
+
+</script>
+	
+</head> 
+<body> 
+<div class="container" id="wrapper2">
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="dropdown" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+            <!-- Top Menu Items -->
+        <ul class="nav navbar-right top-nav">
+            <li class="dropdown">
+                <a href="about.html" class="dropdown-toggle" data-toggle="dropdown" onclick="window.location.href='about.html'"><i class="fa fa-graduation-cap"></i> About us </b></a>
+
+            </li>
+			<li class="dropdown">
+				<a href="signUp2.php" class="dropdown-toggle" type="button" onclick="window.location.href='signUp2.php'" data-toggle="dropdown"><i class="fa fa-user"></i> Sign up</a>
+			</li>
+            <li class="dropdown">
+                <a href="signUp.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Log in <b class="caret"></b></a>
+				<form class="dropdown-menu" method="post" action="login.php" id="login_stuffs">  
+					<input type="text" name="username" id="username" placeholder="Username" autofocus/> 
+					<input type="password" name="password" id="password" placeholder="Password" /> 
+					<button class="btn btn-block btn-primary" type="submit" id="loginButton">
+						<i class="glyphicon glyphicon-log-in"></i> Log in
+					</button>
+				</form>
+			</li>
+			
+        </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+    </nav>
+</div>	
+<div id="test"></div>
+<div class="centralBox">
+	
+	<img class="centralLogo" src="images/golfBallLogo.jpg" alt="Our Logo"/>
+    <div class="test_republic_text">FBBC Fantasy Golf</div>
+	<div class="subheading">Sticks and Balls Yo!</div>
+
+</div>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<div class="carousel-inner" role="listbox">
+		<div class="item active">
+			<div class="container">
+				<div class="carousel-caption">
+					<p>Proverbs 6:6 - "Go to the ant, thou sluggard; consider her ways, and be wise:"</p>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<div class="container">
+				<div class="carousel-caption">
+					<p>I Corinthians 5:7 - "Purge out therefore the old leaven, that ye may be a new lump, as ye are unleavened. For even Christ our passover is sacrificed for us:"</p>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<div class="container">
+				<div class="carousel-caption">
+					<p>Exodus 5:9 - "Let there more work be laid upon the men, that they may labour therein; and let them not regard vain words."</p>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<div class="container">
+				<div class="carousel-caption">
+					<p>Exodus 20:9 - "Six days shalt thou labour, and do all thy work:"</p>
+				</div>
+			</div>
+		</div>
+		<div class="item">
+			<div class="container">
+				<div class="carousel-caption">
+					<p>1 Samuel 8:16 - "And he will take your menservants, and your maidservants, and your goodliest young men, and your asses, and put them to his work."</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	  
+	
+	    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+</body> 
+</html> 
