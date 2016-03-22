@@ -1,0 +1,252 @@
+
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Added .dropdown section by Cody*/ 
+
+/* top header styles */
+#test
+{
+	text-align: center;
+	color: rgb(255, 0, 0);
+	font-size: 20px;
+}
+
+body
+{
+	background-image: url("../images/bg5.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+    text-align: center;
+}
+#loginButton
+{
+	margin-top:10px;
+}
+
+#signUpButton
+{
+	margin-top:10px;
+}
+
+#login_stuffs
+{
+    font-family: Arial;
+}
+
+#username
+{
+	color:#FFFFFF;
+	border-radius: 5px;
+	margin-top:10px;
+	background-color:#B3BBC4;
+}
+
+#password
+{
+	color:#FFFFFF;
+	border-radius: 5px;
+	margin-top:5px;
+	background-color:#B3BBC4;
+}
+.centralBox
+{
+	padding-top: 50px;
+	margin-bottom: 20px;
+}
+
+
+.centralLogo
+{
+
+    border: none;
+    display: block;
+    margin: 0px auto;
+    margin-top: 100px;
+
+    width: 250px;
+}
+
+.top-nav {
+    padding: 0 15px;
+}
+
+.top-nav>li {
+    display: inline-block;
+    float: left;
+	 color: #999;
+}
+
+.top-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    color: #999;
+}
+
+.top-nav>li>ul>li>a{
+    color: #999;
+}
+
+.dropdown:hover>.dropdown-menu,
+.dropdown:hover>.dropdown-menu:hover {
+    display: block;
+    color: #fff;
+    background-color: #000;
+    float: left;
+    position: absolute;
+    margin-top: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;
+    border: 1px solid rgba(0,0,0,.15);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.top-nav>li>a:hover,
+.top-nav>li>a:focus,
+.top-nav>.open>a,
+.top-nav>.open>a:hover,
+.top-nav>.open>a:focus {
+    color: #fff;
+    background-color: #000;
+}
+
+.top-nav>.open>.dropdown-menu {
+	display: block;
+    float: left;
+	color: #999;
+    position: absolute;
+    margin-top: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-bottom: 10px;   
+    border: 1px solid rgba(0,0,0,.15);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #000;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.top-nav>.open>.dropdown-menu>li>a {
+    white-space: nowrap;
+    color: #999;
+}
+
+/* Carousel base class */
+.carousel {
+  margin-top: 20px;
+  padding-top: 115px;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  margin-top: 12px;
+  height: 60px;
+  background-color: #000;
+  opacity: .9;
+}
+
+.carousel-caption
+{
+	height: 5px;
+}
+
+.subheading
+{
+    margin-top: 85px;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: -30px;
+}
+
+/*******************************/
+        Redirect stuff
+/*******************************/
+
+.redirect_body
+{
+    text-align: center;
+}
+
+.redirect_logo_section
+{
+    color: black;
+    text-align: center;
+}     
+
+.redirect_logo
+{
+    margin-top: 80px;
+    width: 250px;
+}
+
+.test_republic_text
+{
+    font-size: 30pt;
+}
+
+.text_section
+{
+    background: rgba(17,103,154,0.8);
+    text-align: center;
+    color: black;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.congrats_text
+{
+    font-size: 26pt;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.text2
+{
+    font-size: 16pt;
+    color: white;
+}
+
+.text3
+{
+    font-size: 16pt;
+    margin-top: 10px;
+    display: inline-block;
+    color: white;
+}
+
+.text4
+{
+    display: inline-block;
+    background: white;
+    color: rgb(55,96,146);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.text5
+{
+    margin-top: 20px;
+    font-size: 16pt;
+    color: white;
+}
+
+#link:link, #link:visited
+{
+    color: white;
+    text-decoration: underline;
+}
+
+#link:hover
+{
+    color: black;
+}
+

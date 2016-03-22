@@ -1,0 +1,628 @@
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* top header styles */
+
+body
+{
+	/*background-image: url("../images/background.png");*/
+	background-image: url("../images/photo2.jpg");
+	color: black;
+}
+
+
+/* added by Andrea */
+
+.navbar-header
+{
+	background-color: black;
+	width: 250px;
+}
+
+#logo-area
+{
+	display: inline-block;
+	margin-top: -11px;
+}
+
+.TestRepublic
+{
+	font-family: Rockwell, Arial;
+	color: white;
+	font-size: 20px;
+}
+
+/* */
+
+#wrapper2{
+    padding-left: 0;
+	background-color: rgb(55,96,146);
+}
+.top-nav {
+    padding: 0 15px;
+}
+
+.top-nav>li {
+    display: inline-block;
+    float: left;
+}
+
+.top-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    color: #999;
+}
+
+.top-nav>li>a:hover,
+.top-nav>li>a:focus,
+.top-nav>.open>a,
+.top-nav>.open>a:hover,
+.top-nav>.open>a:focus {
+    color: #fff;
+    background-color: #000;
+}
+
+.top-nav>.open>.dropdown-menu {
+    float: left;
+    position: absolute;
+    margin-top: 0;
+    border: 1px solid rgba(0,0,0,.15);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.top-nav>.open>.dropdown-menu>li>a {
+    white-space: normal;
+}
+
+ul.message-dropdown {
+    padding: 0;
+    max-height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+li.message-preview {
+    width: 275px;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+li.message-preview>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+li.message-footer {
+    margin: 5px 0;
+}
+
+ul.alert-dropdown {
+    width: 200px;
+}
+
+/* Toggle Styles */
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+	background-color: rgb(149,179,215);
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#signUpDiv
+{
+	padding: 20px;
+	position: relative;
+	/*
+	
+	border: 3px solid black;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	*/
+	width: 100%;
+	text-align: center;
+}
+
+.sign_up_box
+{
+	background: papayawhip;
+	border: 3px solid black;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 20px;
+}
+
+.sign_up_text_area
+{
+	background-color: rgb(55,96,146);
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.sign_up_text
+{
+	font-size: 30pt;
+	font-family: Rockwell, Arial;
+	color: white;
+}
+
+.sign_up_text_area_2
+{
+	background-color: rgb(55,96,146);
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.sign_up_text_2
+{
+	font-size: 20pt;
+	font-family: Rockwell, Arial;
+	color: white;
+}
+
+.congrats_text
+{
+	font-weight: bold;
+	font-size: 18pt;
+}
+
+.name_section
+{
+	font-size: 18pt;
+	color: rgb(55,96,146);
+}
+
+.course_added_text
+{
+	margin-top: 8px;
+	background: rgb(149,179,215);
+	font-size: 14pt;
+	padding: 5px;
+}
+
+label.survey_style input
+{
+	padding: 5px;
+}
+
+#wrapper.toggled #signUpDiv {
+	position: relative;
+	margin-right: 0;
+	position: absolute;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 60px;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+	
+}
+
+.sidebar-nav li {
+    text-indent: 15px;
+    line-height: 25px;
+	font-size: 13pt;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    background: rgba(55,96,146,0.4);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 40px;
+    font-size: 28px;
+	font-weight: bold;
+    line-height: 40px;
+	background-color: rgb(55,96,146);
+	color: rgb(0,0,0);
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav 
+{
+	
+    color: #999999;
+    background: none;
+}
+
+#student-summary
+{
+	line-height: 50px;
+}
+
+@media(min-width:768px) 
+{
+		#wrapper {
+			padding-left: 250px;
+		}
+
+		#wrapper.toggled {
+			padding-left: 0;
+		}
+
+		#sidebar-wrapper {
+			width: 250px;
+			font-size: 14px;
+		}
+
+		#wrapper.toggled #sidebar-wrapper {
+			width: 0;
+		}
+
+		#page-content-wrapper 
+		{
+			padding: 20px;
+			position: relative;
+		}
+
+		#wrapper.toggled #page-content-wrapper {
+			position: relative;
+			margin-right: 0;
+		}
+		
+	/*testing stuff */
+		
+	#warning_box1
+	{
+		background-color: pink;
+		height: 100px;
+	}
+	
+	.warning_msg
+	{
+		font-size: 14pt;
+		padding: 5px;
+	}
+	
+	.warning_sign_msg
+	{
+		margin-top: 40px;
+		color:#FF0000;
+	}
+	
+	table.student_summary
+	{
+		position: relative;
+		top: 40px;
+		font-size: 14pt;
+		border: 2px solid black;
+		border-collapse: collapse;
+		width: 70%;
+		text-align: center;
+	}
+	
+	table.signUpTable
+	{
+		position: relative;
+		top: 40px;
+		font-size: 14pt;
+		border: 2px solid black;
+		border-collapse: collapse;
+		width: 70%;
+		text-align: center;
+		background-color: pink;
+	}
+	
+	table.student_summary td, table.student_summary th
+	{
+		border: 1px solid black;
+		padding: 8px;
+	}
+	
+	table.student_summary thead
+	{
+		background-color: rgb(149,179,215);
+	}
+	
+	table.student_summary th
+	{
+		text-align: center;
+	}
+	
+	table.student_summary col.classes
+	{
+		width: 15%;
+	}
+	
+	table.student_summary col.recent_updates
+	{
+		width: 40%;
+	}
+	
+	table.student_summary col.date
+	{
+		width: 20%;
+	}
+
+	.course_button
+	{
+		padding: 8px;
+		color: white;
+		height: 45px;
+		width: 110px;
+		font-size: 14pt;
+		background-color: rgb(55,96,146);
+	}
+	
+	/***********************
+	/*     Teacher CSS     */
+	/***********************/
+	
+	/* teacherMainPage */
+	table.teacher_summary
+	{
+		position: relative;
+		top: 87px;
+		font-size: 14pt;
+		border: 2px solid black;
+		border-collapse: collapse;
+		width: 70%;
+		text-align: center;
+	}
+	
+	table.teacher_summary td, table.teacher_summary th
+	{
+		border: 1px solid black;
+		padding: 8px;
+		text-align: center;
+	}
+	
+	table.teacher_summary thead
+	{
+		background-color: rgb(149,179,215);
+	}
+
+	table.teacher_summary col.classes
+	{
+		width: 15%;
+	}
+	
+	table.teacher_summary col.recent_updates
+	{
+		width: 40%;
+	}
+	
+	table.teacher_summary col.date
+	{
+		width: 20%;
+	}
+
+	/* teacherClassPage */
+	
+	.course_header
+	{
+		width: 85%;
+		position: fixed;
+		padding: 8px;
+		
+		margin-top: 51px;
+		height: 99px;
+		background: black;
+		font-size: 20pt;
+		color: white;
+		font-weight: bold;
+		z-index: 1;
+	}
+	
+	.course_number
+	{
+		margin-left: 10pt;
+	}
+	
+	.class_name
+	{
+		margin-left: 40pt;
+	}
+	
+	.students_num_text
+	{
+		margin-top: 140px;
+		font-size: 18pt;
+		color: rgb(55,96,146);
+	}
+	
+	.students_number
+	{
+		color: black;
+	}
+	
+	.create_test_button
+	{
+		margin-top: 8px;
+		background: rgb(55,96,146);
+		color: white;
+		font-size: 14pt;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	
+	.test_list_text
+	{
+		margin-top: 20px;
+		font-size: 18pt;
+		font-weight: bold;
+		color: rgb(55,96,146);
+	}
+	
+	table.test_list
+	{
+		position: relative;
+		top: 5px;
+		font-size: 12pt;
+		border: 2px solid black;
+		border-collapse: collapse;
+		width: 35%;
+		text-align: center;
+	}
+	
+	table.test_list td, table.test_list th
+	{
+		border: 1px solid black;
+		padding: 3px;
+		text-align: center;
+	}
+	
+	table.test_list thead
+	{
+		background-color: rgb(149,179,215);
+		padding: 1px;
+	}
+	
+	table.test_list col.test_name
+	{
+		width: 40%;
+	}
+	
+	table.test_list col.test_average
+	{
+		width: 30%;
+	}
+	
+	table.test_list col.view_button_col
+	{
+		width: 25%;
+	}
+	
+	.view_test_button
+	{
+		background-color: rgb(149,179,215);
+	}
+	
+	.student_list_text
+	{
+		margin-top: 30px;
+		font-size: 18pt;
+		font-weight: bold;
+		color: rgb(55,96,146);
+	}
+	
+	table.student_list
+	{
+		position: relative;
+		top: 5px;
+		font-size: 12pt;
+		border: 2px solid black;
+		border-collapse: collapse;
+		width: 70%;
+		text-align: center;
+		background: white;
+	}
+	
+	table.student_list td, table.test_list th
+	{
+		border: 1px solid black;
+		text-align: center;
+		padding: 3px;
+	}
+	
+	.student_list_header
+	{
+		background-color: rgb(149,179,215);
+		padding: 1px;
+		text-align: center;
+		font-weight: bold;
+	}
+	
+	.odd_row
+	{
+		background: rgb(191,191,191);
+	}
+	
+	.failing_grade
+	{
+		color: red;
+	}
+	
+	.grade_test_button
+	{
+		background-color: rgb(149,179,215);
+	}
+	
+	#firstName, #lastName, #email, #password
+	{
+		width: 100%;
+		height:34px;
+		padding:6px 12px;
+		font-size:14px;
+		line-height:1.42857143;
+		color:black;
+		background-color:#fff;
+		background-image:none;
+		border:1px solid #ccc;
+		border-radius:4px;
+		-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);
+		box-shadow:inset 0 1px 1px rgba(0, 0, 0, .075);
+		-webkit-transition:border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+		-o-transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+		transition:border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+	}
+}

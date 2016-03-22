@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<title>Page Loading Effects | Demo 9</title>
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		
+		<!-- Bootstrap Core CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet">
+		<!-- Custom CSS -->
+		<link href="../css/login.css" rel="stylesheet">
+	   <!-- Custom Fonts -->
+		<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<script src="js/snap.svg-min.js"></script>
+
+	</head>
+	<body>
+		<div id="pagewrap" class="pagewrap">
+			<div class="container show" id="page-1">
+			
+				<!-- Top Navigation -->
+				<div class="codrops-top clearfix">
+			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="dropdown" data-target=".navbar-ex1-collapse">
+				<span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+            <!-- Top Menu Items -->
+        <ul class="nav navbar-right top-nav">
+            <li class="dropdown">
+                <a href="about.html" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-graduation-cap"></i> About us <b class="caret"></b></a>
+                <ul class="dropdown-menu about-dropdown">
+                    <li>
+                        <a href="about.html#david" style="color:#999" >David Hughen</a>
+                    </li>
+                    <li>
+                        <a href="about.html#jake" style="color:#999" >Jake Stevens</a>
+                    </li>
+                    <li>
+                        <a href="about.html#andrea" style="color:#999" >Andrea Setiawan</a>
+                    </li>
+                    <li>
+                        <a href="about.html#cody" style="color:#999" >Cody Carr</a>
+                    </li>
+                    <li>
+                        <a href="about.html#victor" style="color:#999" >Victor Jereza</a>
+                    </li>
+                    <li>
+                        <a href="about.html#enyang" style="color:#999" >En Yang Pang</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="about.html" style="color:#999" >View all</a>
+                    </li>
+                </ul>
+            </li>
+			<li class="dropdown">
+				<a href="#page-2" class="dropdown-toggle" type="button" data-toggle="dropdown"><i class="fa fa-user"></i> Sign up</a>
+			</li>
+            <li class="dropdown">
+                <a href="signUp.php" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Log in <b class="caret"></b></a>
+				<form class="dropdown-menu" method="post" action="login.php">  
+					<input type="text" name="username" id="username" placeholder="Username" autofocus/> 
+					<input type="password" name="password" id="password" placeholder="Password" /> 
+					<button class="btn btn-block btn-primary" type="submit" id="loginButton">
+						<i class="glyphicon glyphicon-log-in"></i> Log in
+					</button>
+				</form>
+			</li>
+			
+        </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+    </nav>
+				</div>
+				<header class="codrops-header">
+					<h1>Page Loading Effects <span>Modern ways of revealing new content</span></h1>
+				</header>
+				<section class="columns clearfix">
+					<div class="column">
+						<nav class="codrops-demos">
+							<a class="current-demo" href="index9.html">Tilted</a>
+						</nav>
+					</div>
+					<div class="column">
+						<p>To start the page loading animation, click the following link:</p>
+						<p><a class="pageload-link" href="#page-2">Show Page Loader</a></p>
+					</div>
+					<div class="column">
+						<p>To start the page loading animation, click the following link:</p>
+						<p><a class="pageload-link" href="#page-3">Show Page Loader</a></p>
+					</div>
+				</section>
+			</div><!-- /container -->
+
+			<!-- The new page dummy; this would be dynamically loaded content -->
+			<div class="container" id="page-2">
+				<section>
+					<h2>This is an example for a new page.</h2>
+					<a class="pageload-link" href="http://csweb/CS414/Team1/Git/TestRepublicVic/login.html">Go back</a>
+				</section>
+			</div><!-- /container -->
+			
+			<div class="container" id="page-3">
+				<section>
+					<h2>Page 3</h2>
+					<a class="pageload-link" href="http://csweb/CS414/Team1/Git/TestRepublicVic/login.html">Go back</a>
+				</section>
+			</div><!-- /container -->
+			
+
+			<div id="loader" class="pageload-overlay" data-opening="M 0,0 80,-10 80,60 0,70 0,0" data-closing="M 0,-10 80,-20 80,-10 0,0 0,-10">
+				<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 80 60" preserveAspectRatio="none">
+					<path d="M 0,70 80,60 80,80 0,80 0,70"/>
+				</svg>
+			</div><!-- /pageload-overlay -->
+			
+		</div><!-- /pagewrap -->
+		<script src="js/classie.js"></script>
+		<script src="js/svgLoader.js"></script>
+		<script>
+			(function() {
+				var pageWrap = document.getElementById( 'pagewrap' ),
+					pages = [].slice.call( pageWrap.querySelectorAll( 'div.container' ) ),
+					currentPage = 0,
+					triggerLoading = [].slice.call( pageWrap.querySelectorAll( 'a.pageload-link' ) ),
+					loader = new SVGLoader( document.getElementById( 'loader' ), { speedIn : 400, easingIn : mina.easeinout } );
+
+				function init() {
+					triggerLoading.forEach( function( trigger ) {
+						trigger.addEventListener( 'click', function( ev ) {
+							ev.preventDefault();
+							loader.show();
+							// after some time hide loader
+							setTimeout( function() {
+								loader.hide();
+
+								classie.removeClass( pages[ currentPage ], 'show' );
+								// update..
+								currentPage = currentPage ? 0 : 1;
+								classie.addClass( pages[ currentPage ], 'show' );
+
+							}, 2000 );
+						} );
+					} );	
+				}
+
+				init();
+			})();
+		</script>
+		
+	<!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+	
+	    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 7500 //changes the speed
+    })
+    </script>
+	</body>
+</html>

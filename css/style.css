@@ -1,0 +1,128 @@
+body	{	background-image: url("background.png");
+			font-family: Arial;
+		}
+
+/* top nav */
+
+
+#wrapper2{
+    padding-left: 0;
+}
+.top-nav {
+    padding: 0 15px;
+}
+
+.top-nav>li {
+    display: inline-block;
+    float: left;
+}
+
+.top-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    color: #999;
+}
+
+.top-nav>li>a:hover,
+.top-nav>li>a:focus,
+.top-nav>.open>a,
+.top-nav>.open>a:hover,
+.top-nav>.open>a:focus {
+    color: #fff;
+    background-color: #000;
+}
+
+.top-nav>.open>.dropdown-menu {
+    float: left;
+    position: absolute;
+    margin-top: 0;
+    border: 1px solid rgba(0,0,0,.15);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    background-color: #fff;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.top-nav>.open>.dropdown-menu>li>a {
+    white-space: normal;
+}
+
+ul.message-dropdown {
+    padding: 0;
+    max-height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+li.message-preview {
+    width: 275px;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+}
+
+li.message-preview>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+li.message-footer {
+    margin: 5px 0;
+}
+
+ul.alert-dropdown {
+    width: 200px;
+}
+
+
+#loginContainer	{	background-color: white;
+					width:500px;
+					height:600px;
+					position:absolute;
+					left:50%;
+					top:50%;
+					margin:-300px 0 0 -250px;
+					text-align: center;
+				}
+
+#container2	{	background-color: white;
+				width:400px;
+				height:500px;
+				position:absolute;
+				left:50%;
+				top:50%;
+				margin:-250px 0 0 -200px;
+				text-align: center;
+			}
+				
+#loginLogo	{	height: 150px;
+				width: 150px;
+			}
+			
+#loginText	{	font-size: 25pt;
+				font-weight: bold;
+			}
+			
+#username, #password	{	-webkit-border-radius: 10px;
+							-moz-border-radius: 10px;
+							border-radius: 10px;
+							border: 3px solid rgb(56,93,138);
+							
+							height: 30px;
+							width: 300px;
+							font-family: Arial;
+							padding-left: 10px;
+							font-size: 14pt;
+						}	
+						
+#loginButton	{	background-color: rgb(56,93,138);
+					color: white;
+					font-size: 15pt;
+					font-weight: bold;
+					height: 43px;
+					width: 320px;
+					-webkit-border-radius: 10px;
+					-moz-border-radius: 10px;
+					border-radius: 10px;
+					font-family: Arial;
+				}
