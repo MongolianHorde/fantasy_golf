@@ -66,19 +66,20 @@ where manager_id = ?";
 // Student first and last name to display on top right of screen
 $topRightQuery = "select first_name, last_name from manager where manager_id = ?";
 
-$classQuery = "select event_id from event_list where manager_id = ?";
+$eventQuery = "select event_id from event_list where manager_id = ?";
 
 // event, etc, to display on manager main page
-$tableQuery = "select count(test_id) - count(date_taken) from test_list
-join test using(test_id)
-where student_id = ? and class_id = ? and datediff(date_begin, sysdate()) <= 0 and datediff(date_end, sysdate()) >= 0";
+$tableQuery = "select event.id, event_name, datediff(date_begin, sysdate()) as days_left
+from event_list
+join event
+on event.id = event_list.event_id
+where event_list.manager_id = ? and event.id = ?";
 
 // Display any events that will occur within 7 days
-$warningQuery = "select class_id, datediff(date_end, sysdate()) as days_left from enrollment
-join class using (class_id)
-join test using(class_id)
-join test_list using(student_id, test_id)
-where student_id = ? and datediff(date_end, sysdate()) <= 7 and datediff(date_end, sysdate()) >= 0 and date_taken is null";
+$warningQuery = "select event_id, datediff(date_begin, sysdate()) as days_left from event_list
+join manager on event_list.manager_id = manager.id
+join event on event_list.event_id = event.id
+where manager.id = ? and datediff(date_begin, sysdate()) <= 7 and datediff(date_begin, sysdate()) >= 0";
 
 // The @ is for ignoring PHP errors. Replace "database_down()" with whatever you want to happen when an error happens.
 @ $database->select_db(DATABASENAME);
@@ -88,7 +89,7 @@ $stmt = $database->prepare($query);
 $topRightStatement = $database->prepare($topRightQuery);
 $table = $database->prepare($tableQuery);
 $warningstmt = $database->prepare($warningQuery);
-$classStatement = $database->prepare($classQuery);
+$eventStatement = $database->prepare($eventQuery);
 
 ?>
 
@@ -116,7 +117,7 @@ $classStatement = $database->prepare($classQuery);
 
 				while($stmt->fetch())
 				{
-                    echo '<li><a href=studentClassPage.php?classId='.$class_id = str_replace(" ", "%20", $clid).'><div class=subject-name>'.$clde.'</div></a></li>';
+                    echo '<li><a href=managerEvent.php?eventId='.$class_id = str_replace(" ", "%20", $clid).'><div class=subject-name>'.$clde.'</div></a></li>';
 				}
 				$stmt->close();
 				?>
@@ -162,9 +163,9 @@ $classStatement = $database->prepare($classQuery);
                                     for($i = 0; $i < count($classArray); $i += 2)
                                     {
                                         if($classArray[$i+1] == 0)
-                                            echo $classArray[$i] . ' test expires today.';
+                                            echo $classArray[$i] . ' event starts today.';
                                         else
-                                            echo $classArray[$i] . ' test will expire in ' . $classArray[$i+1] . ' day(s).';
+                                            echo $classArray[$i] . ' event will start in ' . $classArray[$i+1] . ' day(s).';
                                         
                                         echo '<br />';
                                     }
@@ -187,7 +188,7 @@ $classStatement = $database->prepare($classQuery);
 						<thead>
 						<tr>
 							<th>Events</th>
-							<th>Tests to Take</th>
+							<th>Days Left</th>
 						</tr>
 						</thead>
 						
@@ -195,24 +196,24 @@ $classStatement = $database->prepare($classQuery);
 						<?php 
 							// Code added by David Hughen to display class id, update, and date
 							// inside the table in the middle of the page
-							$classStatement->bind_param("s", $id);
-							$classStatement->bind_result($clid);
-							$classStatement->execute();
-							while($classStatement->fetch())
+							$eventStatement->bind_param("s", $id);
+							$eventStatement->bind_result($eid);
+							$eventStatement->execute();
+							while($eventStatement->fetch())
 							{
-                                $tableArray[] = $clid;
+                                $tableArray[] = $eid;
 							}
-							$classStatement->close();
+							$eventStatement->close();
                             
                             for($i = 0; $i < count($tableArray); $i++)
                             {
                                 $table->bind_param("ss", $id, $tableArray[$i]);
-                                $table->bind_result($count);
+                                $table->bind_result($eventId, $eventName, $count);
                                 $table->execute();
                                 while($table->fetch())
                                 {
-                                    echo '<tr><td><button type="button" class="course_button" onclick="location.href=\'studentClassPage.php?classId='.str_replace(" ", "%20", $tableArray[$i]).'\'">'.$tableArray[$i].'</button></td>
-                                          <td>You have '.$count.' test(s) to take</td></tr>';
+                                    echo '<tr><td><button type="button" class="btn btn-primary btn-block" onclick="location.href=\'managerEvent.php?eventId='.str_replace(" ", "%20", $tableArray[$i]).'\'">'.$eventName.'</button></td>
+                                          <td>You have '.$count.' days(s) left</td></tr>';
                                 }
                             }
                             $table->close();
